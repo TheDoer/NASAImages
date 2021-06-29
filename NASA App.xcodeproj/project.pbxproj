@@ -15,7 +15,7 @@
 		F10702DD2685EA65006F47B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10702DC2685EA65006F47B5 /* Assets.xcassets */; };
 		F10702E02685EA65006F47B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10702DE2685EA65006F47B5 /* LaunchScreen.storyboard */; };
 		F13060402689C2E400F5E308 /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130603F2689C2E400F5E308 /* ImagesModel.swift */; };
-		F13060442689C2F700F5E308 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13060432689C2F700F5E308 /* Parser.swift */; };
+		F13060442689C2F700F5E308 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13060432689C2F700F5E308 /* APIService.swift */; };
 		F1C9F3602688E4E300D2B9B5 /* NASA_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C9F35F2688E4E300D2B9B5 /* NASA_AppTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,7 @@
 		F10702DF2685EA65006F47B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F10702E12685EA65006F47B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F130603F2689C2E400F5E308 /* ImagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
-		F13060432689C2F700F5E308 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		F13060432689C2F700F5E308 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		F1C9F35D2688E4E300D2B9B5 /* NASA AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NASA AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C9F35F2688E4E300D2B9B5 /* NASA_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_AppTests.swift; sourceTree = "<group>"; };
 		F1C9F3612688E4E300D2B9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,17 +107,34 @@
 		F10702D22685EA62006F47B5 /* NASA App */ = {
 			isa = PBXGroup;
 			children = (
-				F1D214BD26888FE2008C9DF7 /* Controller */,
 				F1D214BC26888FDC008C9DF7 /* View */,
+				F1C5C840268B328100AC9B70 /* Common */,
+				F1C5C83D268B323A00AC9B70 /* WebService */,
+				F1D214BD26888FE2008C9DF7 /* Controller */,
 				F1D214BB26888FD1008C9DF7 /* Model */,
 				F1D214BA26888FC7008C9DF7 /* ViewModel */,
-				F10702D32685EA62006F47B5 /* AppDelegate.swift */,
-				F10702D52685EA62006F47B5 /* SceneDelegate.swift */,
 				F10702DC2685EA65006F47B5 /* Assets.xcassets */,
 				F10702DE2685EA65006F47B5 /* LaunchScreen.storyboard */,
 				F10702E12685EA65006F47B5 /* Info.plist */,
 			);
 			path = "NASA App";
+			sourceTree = "<group>";
+		};
+		F1C5C83D268B323A00AC9B70 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				F13060432689C2F700F5E308 /* APIService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		F1C5C840268B328100AC9B70 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F10702D32685EA62006F47B5 /* AppDelegate.swift */,
+				F10702D52685EA62006F47B5 /* SceneDelegate.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		F1C9F35E2688E4E300D2B9B5 /* NASA AppTests */ = {
@@ -132,7 +149,6 @@
 		F1D214BA26888FC7008C9DF7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F13060432689C2F700F5E308 /* Parser.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -308,7 +324,7 @@
 			files = (
 				F10702D82685EA62006F47B5 /* ViewController.swift in Sources */,
 				F10702D42685EA62006F47B5 /* AppDelegate.swift in Sources */,
-				F13060442689C2F700F5E308 /* Parser.swift in Sources */,
+				F13060442689C2F700F5E308 /* APIService.swift in Sources */,
 				F10702D62685EA62006F47B5 /* SceneDelegate.swift in Sources */,
 				F13060402689C2E400F5E308 /* ImagesModel.swift in Sources */,
 			);
