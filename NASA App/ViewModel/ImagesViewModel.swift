@@ -6,17 +6,21 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 class ImagesViewModel {
     
+    var items = PublishSubject<[Item]>()
+    
     private var apiService = APIService()
     private var nasaImages = [Item]()
+    private var bag = DisposeBag()
     
-    
+     
     func fetchImagesData(completion: @escaping () -> ()) {
         
         //weak self - prevent retain cycles
-        
         apiService.getImagesData { (result) in
             switch result {
                 case .success(let listOf):
@@ -27,12 +31,16 @@ class ImagesViewModel {
                     print("Error processing json data:\(error)")
             }
         }
+        
+        items.onNext(nasaImages)
+        items.onCompleted()
     }
     
+    
     func numberOfRowsInSection(section: Int) -> Int {
-        if nasaImages.count != 0 {
-            return nasaImages.count
-        }
+//        if nasaImages.count != 0 {
+//            return nasaImages.count
+//        }
         
         return 0
     }
@@ -40,4 +48,5 @@ class ImagesViewModel {
     func cellForAt (indexPath: IndexPath) -> Item {
         return nasaImages[indexPath.row]
     }
+    
 }
