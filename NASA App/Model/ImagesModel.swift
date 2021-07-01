@@ -9,7 +9,7 @@ import Foundation
 
 struct CollectionData: Codable {
     
-    var collection: Collection?
+    var collection: Collection
     
 }
 
