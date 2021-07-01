@@ -1,24 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PtV-ue-9pQ">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--The Milky Way-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NASA_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-zX-Kdl">
+                                <rect key="frame" x="0.0" y="44" width="375" height="657"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="120" id="36P-cb-aRd" customClass="ImagesTableViewCell" customModule="NASA_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="36P-cb-aRd" id="Nca-U7-qkM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCp-md-yyF">
+                                                    <rect key="frame" x="16" y="28" width="64" height="64"/>
+                                                    <color key="tintColor" red="0.93012911080000005" green="0.23401468989999999" blue="0.1410893798" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="Zfj-Fb-Ydc"/>
+                                                        <constraint firstAttribute="height" constant="64" id="abG-dJ-H9y"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tom Tower  |  20 March 2002" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YpK-L2-qRe">
+                                                    <rect key="frame" x="96" y="53" width="243" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARC-2002-ACD02-0056-22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWt-JF-D0h">
+                                                    <rect key="frame" x="96" y="28" width="249" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WWt-JF-D0h" firstAttribute="top" secondItem="PCp-md-yyF" secondAttribute="top" id="0lg-6J-Iy6"/>
+                                                <constraint firstItem="PCp-md-yyF" firstAttribute="centerY" secondItem="Nca-U7-qkM" secondAttribute="centerY" id="3nj-Do-CpQ"/>
+                                                <constraint firstItem="YpK-L2-qRe" firstAttribute="top" secondItem="WWt-JF-D0h" secondAttribute="bottom" constant="5" id="8zT-Qj-sN4"/>
+                                                <constraint firstItem="YpK-L2-qRe" firstAttribute="leading" secondItem="WWt-JF-D0h" secondAttribute="leading" id="TLD-KZ-yST"/>
+                                                <constraint firstItem="WWt-JF-D0h" firstAttribute="leading" secondItem="PCp-md-yyF" secondAttribute="trailing" constant="16" id="WWi-Sq-52K"/>
+                                                <constraint firstAttribute="trailing" secondItem="WWt-JF-D0h" secondAttribute="trailing" constant="30" id="pmk-9g-I4y"/>
+                                                <constraint firstItem="PCp-md-yyF" firstAttribute="leading" secondItem="Nca-U7-qkM" secondAttribute="leadingMargin" id="saK-kC-Vng"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YpK-L2-qRe" secondAttribute="trailing" constant="20" id="tYf-T0-B81"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nasaDate" destination="YpK-L2-qRe" id="INH-MT-qC6"/>
+                                            <outlet property="nasaImage" destination="PCp-md-yyF" id="vp0-lm-jLG"/>
+                                            <outlet property="nasaTitle" destination="WWt-JF-D0h" id="i33-C9-88T"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KEJ-zX-Kdl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AUN-f2-Xi5"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="KEJ-zX-Kdl" secondAttribute="bottom" constant="-34" id="Apu-aA-V2G"/>
+                            <constraint firstItem="KEJ-zX-Kdl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fHx-r2-be5"/>
+                            <constraint firstItem="KEJ-zX-Kdl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wpj-fb-8tI"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="The Milky Way" id="qaX-gL-mBj"/>
+                    <connections>
+                        <outlet property="tableView" destination="KEJ-zX-Kdl" id="OUD-Gd-O8N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="698.55072463768124" y="55.580357142857139"/>
+        </scene>
+        <!--Image Details View Controller-->
+        <scene sceneID="bi3-j0-lsA">
+            <objects>
+                <viewController storyboardIdentifier="ImageDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WkI-5y-eAX" customClass="ImageDetailsViewController" customModule="NASA_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kbp-RP-5nC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OIJ-BH-cDg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="9At-J0-C9Y"/>
+                                    <constraint firstAttribute="width" constant="375" id="kYp-5S-FLf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tom Tower  |  20 March 2002" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyw-Ol-Zx8">
+                                <rect key="frame" x="16" y="280" width="180.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARC-2002-ACD02-0056-22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCh-be-ig7">
+                                <rect key="frame" x="16" y="250" width="202" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tcb-dO-LBw">
+                                <rect key="frame" x="16" y="316.5" width="343" height="244.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">VSHAIP test in 7x10ft#1 W.T. (multiple model configruations) V-22 helicopter shipboard aerodynamic interaction program: L-R seated Allen Wadcox, (standind) Mark Betzina, seated in front of computer Gloria Yamauchi, in background Kurt Long.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hfj-fd-kid"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tcb-dO-LBw" firstAttribute="top" secondItem="Hyw-Ol-Zx8" secondAttribute="bottom" constant="20" id="36h-kz-cVS"/>
+                            <constraint firstItem="Hfj-fd-kid" firstAttribute="trailing" secondItem="Tcb-dO-LBw" secondAttribute="trailing" constant="16" id="6NB-i7-FWQ"/>
+                            <constraint firstItem="Hyw-Ol-Zx8" firstAttribute="leading" secondItem="BCh-be-ig7" secondAttribute="leading" id="AfQ-7c-UXu"/>
+                            <constraint firstItem="OIJ-BH-cDg" firstAttribute="trailing" secondItem="Hfj-fd-kid" secondAttribute="trailing" id="E6m-Ym-HRX"/>
+                            <constraint firstItem="Hfj-fd-kid" firstAttribute="bottom" secondItem="Tcb-dO-LBw" secondAttribute="bottom" constant="106" id="PM2-1l-5VK"/>
+                            <constraint firstItem="Hyw-Ol-Zx8" firstAttribute="top" secondItem="BCh-be-ig7" secondAttribute="bottom" constant="10" id="QYR-LU-i1L"/>
+                            <constraint firstItem="Hyw-Ol-Zx8" firstAttribute="leading" secondItem="Hfj-fd-kid" secondAttribute="leading" constant="16" id="Uai-a4-6XN"/>
+                            <constraint firstItem="OIJ-BH-cDg" firstAttribute="top" secondItem="Hfj-fd-kid" secondAttribute="top" id="V7B-Em-Kxy"/>
+                            <constraint firstItem="BCh-be-ig7" firstAttribute="leading" secondItem="Hfj-fd-kid" secondAttribute="leading" constant="16" id="aAh-1X-r8h"/>
+                            <constraint firstItem="Tcb-dO-LBw" firstAttribute="leading" secondItem="Hfj-fd-kid" secondAttribute="leading" constant="16" id="c4S-WA-cTB"/>
+                            <constraint firstItem="BCh-be-ig7" firstAttribute="top" secondItem="OIJ-BH-cDg" secondAttribute="bottom" constant="20" id="cyh-zo-SdM"/>
+                            <constraint firstItem="OIJ-BH-cDg" firstAttribute="leading" secondItem="Hfj-fd-kid" secondAttribute="leading" id="qRY-jt-HuA"/>
+                            <constraint firstItem="Hyw-Ol-Zx8" firstAttribute="top" secondItem="BCh-be-ig7" secondAttribute="bottom" constant="10" id="s0F-ws-NEk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQn-E9-eqN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1526" y="55"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aR8-ed-7Wf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PtV-ue-9pQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="FXJ-xP-U6v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="809-Fa-LiK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DqF-ZS-9MG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210.1449275362319" y="55.580357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
