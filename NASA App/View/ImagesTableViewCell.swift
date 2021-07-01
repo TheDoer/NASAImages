@@ -19,7 +19,7 @@ class ImagesTableViewCell: UITableViewCell {
     @IBOutlet weak var nasaPhotographer: UILabel!
     
     
-    //Setup movies values
+    //Setup imagaes data values
     
     func setCellWithValueOf(_ images:Data){
         updateUI(title: images.title, dateCreated: images.date_created, Photographer: images.photographer, image: images.description)
