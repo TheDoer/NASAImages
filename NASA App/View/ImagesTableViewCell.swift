@@ -16,7 +16,7 @@ class ImagesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nasaDate: UILabel!
     
-    @IBOutlet weak var nasaPhotographer: UILabel!
+    //@IBOutlet weak var nasaPhotographer: UILabel!
     
     
     //Setup imagaes data values
@@ -32,8 +32,10 @@ class ImagesTableViewCell: UITableViewCell {
     private func updateUI(title: String?, dateCreated: String?, Photographer: String?, image: String?){
         
         self.nasaTitle.text = title
-        self.nasaPhotographer.text = Photographer
+        //self.nasaPhotographer.text = Photographer
         self.nasaDate.text = convertDateFormater(dateCreated)
+        
+        //self.nasaDate.text = "\(Photographer)  |  \(convertDateFormater(dateCreated))"
         
     }
     
@@ -41,10 +43,10 @@ class ImagesTableViewCell: UITableViewCell {
     func convertDateFormater(_ date: String?) -> String {
         var fixDate = ""
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
         if let originalDate = date {
             if let newDate = dateFormatter.date(from: originalDate) {
-                dateFormatter.dateFormat = "dd.MM.yyyy"
+                dateFormatter.dateFormat = "dd MMMM yyyy, HH:mm"
                 fixDate = dateFormatter.string(from: newDate)
             }
         }
