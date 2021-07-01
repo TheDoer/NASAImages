@@ -39,9 +39,6 @@ class ViewController: UIViewController {
                  cellType: ImagesTableViewCell.self)
           ) { row , item , cell in
             
-            //let json = viewModel.cellForAt(indexPath: indexPath)
-            //print("JSonData: \(json)")
-            //cell.setCellWithValueOf(json)
             
 
         }.disposed(by: bag)
@@ -71,31 +68,3 @@ class ViewController: UIViewController {
     
 }
 
-
-
-//extension ViewController: UITableViewDataSource, UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        //return viewModel.numberOfRowsInSection(section: section)
-//
-//        return 5
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ImagesTableViewCell
-//
-//        //let json = viewModel.cellForAt(indexPath: indexPath)
-//        //print("JSonData: \(json)")
-//        //cell.setCellWithValueOf(json)
-//
-//
-//
-//        return cell
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//
-//        return 120
-//    }
-//
-//
-//}
